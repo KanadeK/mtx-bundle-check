@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mtx-bundle-check"
+version = "0.1.0"
+description = "Stream-check sparse count matrices and feature/barcode sidecars."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "KanadeK"}]
+dependencies = []
+
+[project.scripts]
+mtx-bundle-check = "mtx_bundle_check.cli:main"
+
+[project.urls]
+Repository = "https://github.com/KanadeK/mtx-bundle-check"
+Issues = "https://github.com/KanadeK/mtx-bundle-check/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
